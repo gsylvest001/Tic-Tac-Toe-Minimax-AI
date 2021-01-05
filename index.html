@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
+    <script src="gameScript.js" defer></script>
+    <title>Tic Tac Toe</title>
+</head>
+<body>
+    <div class="board" id="board">
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+    </div>
+    <div class="controlPanel" style="flex-direction: column">
+
+        <h2 style="margin-top: 10px" id="turnDisplay">Player 1's Turn</h2>
+        <h3 style="margin-top: 30px">Control Panel</h3>
+
+        <div>
+            <label for="difficulty">Select Difficulty Level: </label>
+            <select name="difficulty" style="margin-right: 30px; margin-bottom: 30px" id="difficulty">
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="grandMaster">Grand Master</option>
+            </select>
+        </div>
+
+        
+        <label for="player1">Select O Player 1: </label>
+        <select name="player1" style="margin-right: 30px" id="player1">
+            <option value="human">Human</option>
+            <option value="computerAI">Computer AI</option>
+        </select>
+
+        <label for="player2">Select X Player 2: </label>
+        <select name="player2" id="player2">
+            <option value="human">Human</option>
+            <option value="computerAI">Computer AI</option>
+        </select>
+
+        <div>
+            <button id="restartButton" onclick="resetGame()" style="margin-top: 30px; width: 90px;">Restart</button>
+        </div>
+       
+    </div>
+    
+   
+
+        
+
+    
+</body>
+</html>

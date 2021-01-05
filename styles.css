@@ -1,0 +1,123 @@
+.board {
+    width: 200px;
+    height: 200px;
+    display: grid;
+    margin: 40px;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(3, auto)
+}
+
+.board.x .cell:not(.x):not(.circle):hover::before,
+.board.x .cell:not(.x):not(.circle):hover::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 80px;
+    background-color: #d0d2f7;
+}
+
+.cell.x::before,
+.board.x .cell:not(.x):not(.circle):hover::before {
+    transform: rotate(45deg);
+}
+
+.cell.x::after,
+.board.x .cell:not(.x):not(.circle):hover::after {
+    transform: rotate(-45deg);
+}
+
+.board.circle .cell:not(.x):not(.circle):hover::before,
+.board.circle .cell:not(.x):not(.circle):hover::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;   
+}
+
+.board.circle .cell:not(.x):not(.circle):hover::before, 
+.cell.circle::before {
+    width: 70px;
+    height: 70px;
+    background-color: #ed9aa6;
+}
+
+.board.circle .cell:not(.x):not(.circle):hover::after, 
+.cell.circle::after {
+    width: 60px;
+    height: 60px;
+    background-color: white;
+}
+
+
+.cell {
+    width: 80px;
+    height: 80px;
+    background-color: white;
+    border: 3px solid #ce9f6f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.cell:first-child,
+.cell:nth-child(2),
+.cell:nth-child(3) {
+    border-top: none;
+}
+
+.cell:first-child,
+.cell:nth-child(4),
+.cell:nth-child(7) {
+    border-left: none;
+}
+
+.cell:last-child,
+.cell:nth-child(8),
+.cell:nth-child(7) {
+    border-bottom: none;
+}
+
+.cell:nth-child(3),
+.cell:nth-child(6),
+.cell:last-child {
+    border-right: none;
+}
+
+.cell.x::before,
+.cell.x::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 80px;
+    background-color: #02075d;
+}
+
+.cell.x::before {
+    transform: rotate(45deg);
+}
+
+.cell.x::after {
+    transform: rotate(-45deg);
+}
+
+.cell.circle::before,
+.cell.circle::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;    
+}
+
+.cell.circle::before {
+    width: 70px;
+    height: 70px;
+    background-color: #c91f37;
+}
+
+.cell.circle::after {
+    width: 60px;
+    height: 60px;
+    background-color: white;
+}
